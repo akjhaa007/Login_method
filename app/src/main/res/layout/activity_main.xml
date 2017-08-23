@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.mitha_upload.MainActivity">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/pick_image"
+                android:text="pickimage"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                />
+
+
+
+            
+            <ImageButton
+
+                android:contentDescription="Gallery Image"
+                android:id="@+id/image_file"
+                android:layout_below="@id/pick_image"
+                android:layout_width="250dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="150dp"
+                />
+            <EditText
+                android:id="@+id/get_title"
+                android:layout_marginTop="10dp"
+                android:hint="Title"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="200dp"
+                android:layout_below="@+id/image_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/getDescription"
+                android:hint="Description"
+                android:layout_below="@id/get_title"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/getHeight"
+                android:layout_below="@id/getDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:inputType="numberSigned"
+                android:hint="Height in cm"
+                android:layout_marginRight="200dp"/>
+            <EditText
+                android:id="@+id/getWidth"
+                android:layout_below="@+id/getDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="20dp"
+                android:hint="Width in cm"/>
+
+            <TextView
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="200dp"
+                android:layout_below="@id/getWidth"
+                android:layout_alignBaseline="@+id/getImageType"
+                android:text=" Painting Type"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+         <Spinner
+             android:background="@color/colorPrimaryDark"
+             android:popupBackground="#ba3131"
+             android:soundEffectsEnabled="true"
+             android:id="@+id/getImageType"
+             android:layout_marginTop="10dp"
+             android:layout_below="@+id/getHeight"
+             android:layout_width="match_parent"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="200dp"
+             android:layout_height="wrap_content">
+
+</Spinner>
+
+            <TextView
+                android:id="@+id/available_label"
+                android:layout_marginLeft="196dp"
+                android:layout_marginRight="22dp"
+                android:layout_below="@id/getWidth"
+                android:layout_alignBaseline="@+id/getAvailability"
+                android:text=" Painting Type"
+                android:textSize="12sp"
+                android:textColor="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Spinner
+android:background="@color/colorPrimaryDark"
+                android:popupBackground="#ba3131"
+                android:id="@+id/getAvailability"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/getWidth"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="200dp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+            <EditText
+                android:id="@+id/get_price"
+                android:layout_below="@+id/getAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColorHint="@color/colorAccent"
+                android:layout_marginLeft="20dp"
+
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginRight="200dp"
+                android:hint="Price"/>
+
+            <TextView
+                android:layout_marginLeft="153dp"
+
+                android:layout_alignBaseline="@id/get_price"
+                android:text="USD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <Button
+                android:background="@color/colorPrimary"
+                android:text="Upload"
+                android:textColor="@android:color/white"
+                android:id="@+id/submit_button"
+                android:layout_below="@+id/get_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.mitha_upload.Confirm">
+
+
+    <ImageView
+        android:background="@color/colorAccent"
+        android:layout_marginBottom="320dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="200dp"
+        android:id="@+id/imageconfa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+
+
+    <TextView
+        android:hint="Title"
+        android:layout_marginLeft="210dp"
+        android:textSize="20sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+    <TextView
+        android:hint="type"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/titleView"
+        android:id="@+id/showimagetype"
+        android:layout_marginLeft="210dp"
+        android:textSize="20sp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <TextView
+        android:hint="Price"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/showimagetype"
+        android:id="@+id/showprice"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginLeft="210dp"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+
+    <TextView
+        android:hint="Avaibility"
+        android:background="@color/colorAccent"
+        android:layout_below="@id/showprice"
+        android:id="@+id/show_available_status"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_marginLeft="210dp"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+<TextView
+    android:id="@+id/textDescription"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="80dp"
+    android:layout_below="@id/showprice"
+    android:textSize="20sp"
+    android:textColor="@android:color/black"
+    android:text="Description"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <TextView
+
+            android:layout_marginLeft="10dp"
+             android:layout_marginRight="10dp"
+             android:layout_marginTop="5dp"
+             android:background="#bab7b7"
+             android:layout_below="@id/textDescription"
+             android:id="@+id/description"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+    <TextView
+
+        android:text="Height"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/description"
+        android:id="@+id/textHeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <TextView
+
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="210dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:layout_below="@id/textHeight"
+            android:id="@+id/dimheight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    <TextView
+
+        android:text="Width"
+        android:layout_marginLeft="210dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/description"
+        android:id="@+id/textWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+
+            android:background="@color/colorAccent"
+            android:layout_below="@id/textWidth"
+            android:id="@+id/dimwidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+<Button
+    android:id="@+id/upload_confirm"
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/dimwidth"
+    android:text="Upload data"
+    android:layout_marginBottom="80dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="image_type">
+        <item>Madhubani</item>
+        <item>Ramayana</item>
+        <item>KrishnaLila</item>
+        <item>Ganesha</item>
+        <item>Fish</item>
+        <item>Lotus</item>
+        <item>Peacock</item>
+        <item>Agriculture</item>
+        <item>Invention</item>
+        <item>EventToday</item>
+        <item>RecentEvent</item>
+        <item>Popular</item>
+        <item>Advertisement</item>
+
+
+    </string-array>
+</resources>
