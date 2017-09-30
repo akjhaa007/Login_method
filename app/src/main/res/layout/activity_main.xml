@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@android:color/white"
     android:layout_height="match_parent"
     tools:context="com.example.root.mitha_upload.MainActivity">
 
@@ -41,6 +41,7 @@
                 android:id="@+id/get_title"
                 android:layout_marginTop="10dp"
                 android:hint="Title"
+                android:inputType="textCapWords"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="200dp"
                 android:layout_below="@+id/image_file"
@@ -53,6 +54,7 @@
                 android:layout_below="@id/get_title"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
+                android:inputType="textCapSentences"
                 android:layout_marginLeft="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -97,16 +99,15 @@
              android:layout_marginLeft="20dp"
              android:layout_marginRight="200dp"
              android:layout_height="wrap_content">
-
-</Spinner>
+         </Spinner>
 
             <TextView
                 android:id="@+id/available_label"
-                android:layout_marginLeft="196dp"
+                android:layout_marginLeft="200dp"
                 android:layout_marginRight="22dp"
                 android:layout_below="@id/getWidth"
                 android:layout_alignBaseline="@+id/getAvailability"
-                android:text=" Painting Type"
+                android:text="stock status"
                 android:textSize="12sp"
                 android:textColor="@color/colorAccent"
                 android:layout_width="match_parent"
@@ -132,6 +133,7 @@ android:background="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="numberSigned"
+                android:maxLength="10000"
                 android:textColorHint="@color/colorAccent"
                 android:layout_marginLeft="20dp"
 
@@ -147,6 +149,8 @@ android:background="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
             <Button
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:background="@color/colorPrimary"
                 android:text="Upload"
                 android:textColor="@android:color/white"

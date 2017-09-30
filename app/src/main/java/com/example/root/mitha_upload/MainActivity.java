@@ -11,6 +11,10 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.Spanned;
+import android.text.TextWatcher;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -27,13 +31,16 @@ import static android.R.attr.path;
 import static android.content.Intent.ACTION_PICK;
 import static android.provider.MediaStore.Images.Thumbnails.INTERNAL_CONTENT_URI;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements TextWatcher{
 
     ImageView Image_v;
     Button btn;
     Uri imgUri;
+    Boolean isHeight =false;
+    Boolean isWidth =false;
+    Boolean isAvaialable =false;
 
-
+    private final String PREFIX="http://";
     Button conf,btnn;
     EditText title, description, dimHeight, dimWidth,gprice;
 
@@ -97,6 +104,145 @@ public class MainActivity extends AppCompatActivity {
         dimWidth = (EditText) findViewById(R.id.getWidth);
         gprice= (EditText) findViewById(R.id.get_price);
        // gprice.setTag(Integer.valueOf(12));
+
+       // dimWidth.addTextChangedListener(this);
+      //  dimHeight.addTextChangedListener(this);
+
+        dimWidth.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+
+
+
+
+
+                if(!dimWidth.getText().toString().contains("cm") && !isWidth) {
+
+
+                    dimWidth.setText(dimWidth.getText() + "cm");
+
+
+                    isWidth = true;
+                }
+                else if(dimWidth.getText().length() == 0 && isWidth && !dimWidth.getText().toString().contains("cm"))
+                {
+
+                    dimWidth.setText(dimWidth.getText() + "cm");
+
+
+                    isWidth = false;
+
+
+                }
+
+
+
+
+            }
+        });
+
+      //-----------------------------------------------------Height--------------------------------
+
+        dimHeight.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+
+
+
+                if(!dimHeight.getText().toString().contains("cm") && !isHeight) {
+
+
+                    dimHeight.setText(dimHeight.getText() + "cm");
+
+
+                    isHeight = true;
+                }
+                else if(dimHeight.getText().length() == 0 && isAvaialable && !dimHeight.getText().toString().contains("cm"))
+                {
+
+                    dimHeight.setText(dimHeight.getText() + "cm");
+
+
+                    isHeight = false;
+
+
+                }
+
+
+
+            }
+        });
+
+
+
+
+
+//--------------------------------------set USD-------------------------------------------------------------
+
+        gprice.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+                if(!gprice.getText().toString().contains("$") && !isAvaialable) {
+                    gprice.setText(gprice.getText() + "$");
+                    isAvaialable = true;
+                }
+                else if(gprice.getText().length() == 0 && isAvaialable && !gprice.getText().toString().contains("$")){
+                    gprice.setText(gprice.getText() + "$");
+                    isAvaialable = false;
+                }
+
+
+
+
+
+
+
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,5 +332,22 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable editable) {
+
+
     }
 }

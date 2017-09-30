@@ -80,9 +80,7 @@ public class Confirm extends AppCompatActivity {
         showPrice=(TextView)findViewById(R.id.showprice);
         showPrice.setText(getIntent().getExtras().getString("USD"));
 
-        Intent intent =getIntent();
-        String str = intent.getStringExtra("USD");
-        showPrice.setText(str);
+
        // showPrice.setTag(Integer.valueOf(1));
 
         upload =(Button)findViewById(R.id.upload_confirm);

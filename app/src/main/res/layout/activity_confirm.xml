@@ -5,9 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="#b4aaaa"
     android:layout_height="match_parent"
     tools:context="com.example.root.mitha_upload.Confirm">
+
+
+
+   <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
 
     <ImageView
@@ -37,7 +43,7 @@
 
 
     <TextView
-        android:hint="type"
+        android:hint="Type"
         android:background="@color/colorAccent"
         android:layout_below="@id/titleView"
         android:id="@+id/showimagetype"
@@ -170,6 +176,6 @@
     android:layout_height="wrap_content" />
 
 
-
+</RelativeLayout>
 
 </RelativeLayout>
